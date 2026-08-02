@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { CalendarDays, Clock3, Heart, MapPin, Music2, Volume2, VolumeX } from 'lucide-react';
 import './styles.css';
@@ -33,6 +33,7 @@ const mapUrl = 'https://www.google.com/maps/place/Vijay+Krishna+Mahal/@9.9701854
 function App() {
   const [lang, setLang] = useState('en');
   const [muted, setMuted] = useState(true);
+  const audioRef = useRef(null);
   const [remaining, setRemaining] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
   const t = copy[lang];
 
@@ -49,12 +50,32 @@ function App() {
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20260823/20260824&location=${encodeURIComponent('Vijay Krishna Mahal, Madurai')}`;
   }, []);
 
+  const toggleMusic = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (muted) {
+      try { await audio.play(); setMuted(false); } catch { setMuted(true); }
+    } else {
+      audio.pause(); setMuted(true);
+    }
+  };
+
+  const skipFinalSecond = () => {
+    const audio = audioRef.current;
+    if (!audio || !Number.isFinite(audio.duration)) return;
+    if (audio.currentTime >= audio.duration - 1) {
+      audio.currentTime = 0;
+      if (!muted) audio.play().catch(() => setMuted(true));
+    }
+  };
+
   return <main className={lang === 'ta' ? 'tamil' : ''}>
+    <audio ref={audioRef} src="/music/maangalyam.mp3" preload="metadata" onTimeUpdate={skipFinalSecond} />
     <div className="grain" />
     <nav className="nav">
       <span className="monogram">P <i>♥</i> S</span>
       <div className="nav-actions">
-        <button className="icon-button" aria-label="Toggle music" onClick={() => setMuted(!muted)}>{muted ? <VolumeX size={18}/> : <Volume2 size={18}/>}</button>
+        <button className="icon-button" aria-label={muted ? 'Play music' : 'Pause music'} onClick={toggleMusic}>{muted ? <VolumeX size={18}/> : <Volume2 size={18}/>}</button>
         <button className="language" onClick={() => setLang(lang === 'en' ? 'ta' : 'en')}>{t.lang}</button>
       </div>
     </nav>
