@@ -11,7 +11,7 @@ const copy = {
     bornBody: 'Born in the same hospital, our paths crossed before either of us could remember. Perhaps destiny had already introduced us.',
     loveTitle: 'A love that grew with us', loveBody: 'Through more than ten years, countless conversations and every season of life, we kept choosing each other.',
     foreverTitle: 'Now, our forever begins', foreverBody: 'With full hearts and the blessings of our families, we are turning our long-loved story into a lifetime.',
-    celebrate: 'Come celebrate with us', reception: 'Reception', wedding: 'Wedding', receptionTime: 'Saturday · 6:00 PM onwards', weddingTime: 'Sunday · Muhurtham time to be announced',
+    celebrate: 'Come celebrate with us', reception: 'Reception', wedding: 'Wedding', receptionTime: 'Saturday · 6:00 PM onwards', weddingTime: 'Sunday · 10:30 AM to 12:00 PM',
     venue: 'Vijay Krishna Mahal', venueCity: 'Madurai, Tamil Nadu', directions: 'Get directions', countdown: 'Counting down to forever', days: 'Days', hours: 'Hours', mins: 'Minutes', secs: 'Seconds',
     closing: 'A decade of love. A lifetime to go.', closingNote: 'Your presence will make the beginning of our forever even more beautiful.', save: 'Save the date', footer: 'With love, Pavitra & Shankaradinesh'
   },
@@ -22,7 +22,7 @@ const copy = {
     bornBody: 'ஒரே மருத்துவமனையில் பிறந்தோம். நினைவுகள் உருவாகும் முன்பே எங்கள் பாதைகள் சந்தித்தன. அன்றே விதி எங்களை அறிமுகப்படுத்தியிருக்கலாம்.',
     loveTitle: 'எங்களுடன் வளர்ந்த காதல்', loveBody: 'பத்து ஆண்டுகளுக்கும் மேலாக, எண்ணற்ற உரையாடல்களிலும் வாழ்க்கையின் ஒவ்வொரு பருவத்திலும், ஒருவரை ஒருவர் தேர்ந்தெடுத்தோம்.',
     foreverTitle: 'இன்று எங்கள் என்றும் தொடங்குகிறது', foreverBody: 'குடும்பங்களின் ஆசிகளோடும் நிறைந்த இதயங்களோடும், எங்கள் காதல் கதையை வாழ்நாள் பயணமாக மாற்றுகிறோம்.',
-    celebrate: 'எங்களுடன் கொண்டாட வாருங்கள்', reception: 'வரவேற்பு', wedding: 'திருமணம்', receptionTime: 'சனிக்கிழமை · மாலை 6:00 மணி முதல்', weddingTime: 'ஞாயிற்றுக்கிழமை · முகூர்த்த நேரம் விரைவில்',
+    celebrate: 'எங்களுடன் கொண்டாட வாருங்கள்', reception: 'வரவேற்பு', wedding: 'திருமணம்', receptionTime: 'சனிக்கிழமை · மாலை 6:00 மணி முதல்', weddingTime: 'ஞாயிற்றுக்கிழமை · காலை 10:30 மணி முதல் மதியம் 12:00 மணி வரை',
     venue: 'விஜய் கிருஷ்ணா மஹால்', venueCity: 'மதுரை, தமிழ்நாடு', directions: 'வழிகாட்டி', countdown: 'எங்கள் என்றென்றும் தொடங்க இன்னும்', days: 'நாட்கள்', hours: 'மணி', mins: 'நிமிடம்', secs: 'வினாடி',
     closing: 'பத்தாண்டு காதல். இனி வாழ்நாள் முழுவதும்.', closingNote: 'எங்கள் புதிய பயணத்தின் தொடக்கத்தில் உங்கள் வருகை மேலும் அழகு சேர்க்கும்.', save: 'தேதியைச் சேமிக்க', footer: 'அன்புடன், பவித்ரா & சங்கரதினேஷ்'
   }
