@@ -63,7 +63,7 @@ function App() {
       <div className="orbit orbit-one"/><div className="orbit orbit-two"/>
       <p className="eyebrow reveal">{t.eyebrow}</p>
       <p className="invite reveal delay-1">{t.invite}</p>
-      <div className="names reveal delay-2"><h1>Pavitra</h1><span>{t.and}</span><h1>Shankaradinesh</h1></div>
+      <div className="names reveal delay-2"><h1>Pavi</h1><span>{t.and}</span><h1>Shankar</h1></div>
       <div className="hero-date reveal delay-3"><span/> {t.date} <span/></div>
       <a href="#story" className="scroll-cue">{t.scroll}<b>↓</b></a>
     </section>
