@@ -31,11 +31,10 @@ const copy = {
 const mapUrl = 'https://www.google.com/maps/place/Vijay+Krishna+Mahal/@9.9701854,78.1606238,17z/data=!4m9!3m8!1s0x3b00c730d517064d:0x7214d9f9ec9d803f!5m2!4m1!1i2!8m2!3d9.9701854!4d78.1631987!16s%2Fg%2F11h3wtzn1z';
 
 function App() {
-  const [lang, setLang] = useState('en');
   const [muted, setMuted] = useState(true);
   const audioRef = useRef(null);
   const [remaining, setRemaining] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
-  const t = copy[lang];
+  const t = copy.en;
 
   useEffect(() => {
     const tick = () => {
@@ -69,14 +68,13 @@ function App() {
     }
   };
 
-  return <main className={lang === 'ta' ? 'tamil' : ''}>
+  return <main>
     <audio ref={audioRef} src="/music/maangalyam.mp3" preload="metadata" onTimeUpdate={skipFinalSecond} />
     <div className="grain" />
     <nav className="nav">
       <span className="monogram">P <i>♥</i> S</span>
       <div className="nav-actions">
         <button className="icon-button" aria-label={muted ? 'Play music' : 'Pause music'} onClick={toggleMusic}>{muted ? <VolumeX size={18}/> : <Volume2 size={18}/>}</button>
-        <button className="language" onClick={() => setLang(lang === 'en' ? 'ta' : 'en')}>{t.lang}</button>
       </div>
     </nav>
 
